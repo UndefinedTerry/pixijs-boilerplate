@@ -3,19 +3,19 @@ import Sound from "pixi-sound";
 import Stats from "stats.js";
 
 const app = new PIXI.Application({
-    backgroundColor: 0x1099bb
+    backgroundColor: 0x000000
 });
 
 function init() {
     // load assets and fonts
-    document.body.appendChild(app.view);
+    document.getElementById("game-body").appendChild(app.view);
     setup();
 }
 
 function setup() {
     let stats = new Stats();
     stats.showPanel(0);
-    document.body.appendChild(stats.dom);
+    document.getElementById("game-body").appendChild(stats.dom);
 
     // game loop
     app.ticker.add((delta) => {
